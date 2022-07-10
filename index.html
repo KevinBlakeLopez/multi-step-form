@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="grid place-content-center">
+      <div class="border-solid border-2 p-2 w-96">
+        <div class="flex justify-center"></div>
+        <section id="stepOne">
+          <h3 class="text-lg font-bold border-solid border-b-2">
+            Order a Reading
+          </h3>
+
+          <label for="consultType">What kind of reading?</label>
+          <select
+            name="consultType"
+            id="consultType"
+            class="border-solid border-2 w-full mb-2"
+          >
+            <option value="">Select...</option>
+            <option value="3 card">$10 3 card Tarot</option>
+            <option value="large spread">$20 Large Spread Tarot</option>
+            <option value="natal chart">$30 Natal Chart reading</option>
+            <option value="astro & tarot">$40 Astrology and Tarot</option>
+          </select>
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            required
+            pattern="[A-Z\sa-z]{3,20}"
+            class="border-solid border-2 w-full mb-2"
+          />
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            required
+            pattern="[A-Z\sa-z]{3,20}"
+            class="border-solid border-2 w-full mb-2"
+          />
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="border-solid border-2 w-full mb-2"
+            required
+          />
+        </section>
+        <section id="stepTwo" class="hidden">
+          <h3 class="text-lg font-bold">Enter Natal Information</h3>
+          <label for="birthDate">Birthdate:</label>
+          <input
+            type="date"
+            id="birthDate"
+            name="birth_date"
+            class="border-solid border-2 w-full mb-2"
+          />
+          <label for="birthTime">Birthtime:</label>
+          <input
+            type="time"
+            id="birthTime"
+            name="birth_time"
+            class="border-solid border-2 w-full mb-2"
+          />
+          <label for="birthCity">Place of Birth:</label>
+          <input
+            type="text"
+            id="birthCity"
+            name="birth_city"
+            class="border-solid border-2 w-full mb-2"
+          />
+          <label for="birthCountry">Country of Birth:</label>
+          <input
+            type="text"
+            id="birthCountry"
+            name="birth_country"
+            class="border-solid border-2 w-full mb-2"
+          />
+          <label for="birthCertificate"
+            >Birth Certificate image (optional):</label
+          >
+          <input
+            type="file"
+            class="border-solid border-2 w-full mb-2"
+            id="birthCertificate"
+          />
+        </section>
+        <section id="stepThree" class="hidden">
+          <h3 class="text-lg font-bold">Is this Your Birth Chart?</h3>
+          <img src="sample-natal-chart.jpg" alt="your natal chart" />
+          <input
+            type="checkbox"
+            class="border-solid border-2 mb-2"
+            id="yes"
+            name="yes"
+            value="yes"
+          />
+          <label for="yes">Yes</label>
+
+          <input
+            type="checkbox"
+            class="border-solid border-2 mb-2"
+            id="no"
+            name="no"
+            value="no"
+          />
+          <label for="no">No</label>
+
+          <input
+            type="checkbox"
+            class="border-solid border-2 mb-2"
+            id="idk"
+            name="idk"
+            value="I don't know"
+          />
+          <label for="idk">I don't know</label>
+        </section>
+        <div class="flex justify-between">
+          <button
+            id="prevButton"
+            class="hiddenPresent rounded bg-blue-700 py-1 px-3 text-white"
+          >
+            Prev
+          </button>
+          <button
+            id="nextButton"
+            class="rounded bg-blue-700 py-1 px-3 text-white"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
