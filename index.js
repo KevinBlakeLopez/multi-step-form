@@ -30,6 +30,9 @@ prevBtn.addEventListener("click", () => {
     return;
   } else {
     nextBtn.classList.remove("hiddenPresent");
+    if (stepTracker === steps.length - 1) {
+      nextBtn.innerHTML = "Next";
+    }
     //if (stepTracker > 0) {
     stepTracker--;
     if (stepTracker === 0) prevBtn.classList.add("hiddenPresent");
