@@ -7,8 +7,9 @@ const prevBtn = document.getElementById("prevButton");
 const stepOne = document.getElementById("stepOne");
 const stepTwo = document.getElementById("stepTwo");
 const stepThree = document.getElementById("stepThree");
+const stepFour = document.getElementById("stepFour");
 
-const steps = [stepOne, stepTwo, stepThree];
+const steps = [stepOne, stepTwo, stepThree, stepFour];
 let stepTracker = 0;
 
 nextBtn.addEventListener("click", () => {
